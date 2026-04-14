@@ -1,24 +1,26 @@
 import React from 'react'
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import { Menu, ExternalLink, ArrowUpRight } from 'lucide-react'
+import { Menu, ExternalLink, ArrowUpRight, X } from 'lucide-react'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { SECTIONS, PERSONAL } from '@/data/portfolio'
+import { Drawer } from 'vaul'
+import { DrawerContent, DrawerTrigger } from '../ui/drawer'
 function Sidebar() {
   const [open, setOpen] = useState(false)
 
   return (
+   
     <header className="fixed top-0 left-0 right-0 z-50 h-14
-      bg-background/80 backdrop-blur-md border-b border-border
-      flex items-center px-4 gap-4">
+    border-b border-border/60 bg-background/45 supports-backdrop-filter:bg-background/30 backdrop-blur-xl flex items-center px-4">
 
       {/* ── Logo ── */}
       <Link
         to="/"
         className="flex items-center gap-2 text-sm font-semibold
-          hover:text-primary transition-colors shrink-0"
+          hove    r:text-primary transition-colors shrink-0"
       >
         <span className="w-5 h-5 rounded border border-primary
           flex items-center justify-center">
@@ -56,48 +58,56 @@ function Sidebar() {
         </Button>
 
         {/* ── Mobile menu (Sheet) ── */}
-        <Sheet open={open} onOpenChange={setOpen}>
-          <SheetTrigger asChild>
-            <Button variant="ghost" size="icon" className="lg:hidden">
-              <Menu size={18} />
-            </Button>
-          </SheetTrigger>
 
-          <SheetContent side="bottom"  className="h-[60vh] bg-background/90 backdrop-blur-md rounded-t-xl p-0">
-            <div className="flex justify-center pt-2">
-  <div className="w-10 h-1.5 bg-muted rounded-full"></div>
-</div>
-            <div className="flex flex-col h-full pt-14 px-3 py-4">
-              <p className="px-3 mb-2 text-[11px] font-semibold tracking-widest
-                uppercase text-muted-foreground">
-                Sections
-              </p>
-              <nav className="flex flex-col gap-0.5">
-                {SECTIONS.map((section) => (
-                  <NavLink
-                    key={section.id}
-                    to={section.path}
-                    end={section.path === '/'}
-                    onClick={() => setOpen(false)}
-                    className={({ isActive }) =>
-                      cn(
-                        'flex items-center px-3 py-2 rounded-md text-sm transition-colors',
-                        isActive
-                          ? 'bg-accent text-foreground font-medium border-l-2 border-primary pl-[10px]'
-                          : 'text-muted-foreground hover:text-foreground hover:bg-accent'
-                      )
-                    }
-                  >
-                    {section.label}
-                  </NavLink>
-                ))}
-              </nav>
-            </div>
-          </SheetContent>
-        </Sheet>
+          <Drawer.Root open={open} onOpenChange={setOpen}  modal={false}>
+      <Drawer.Trigger asChild>
+        <button className="p-2 border lg:hidden"><Menu size={16} /></button>
+      </Drawer.Trigger>
+
+      <Drawer.Portal>
+        <Drawer.Overlay className="fixed inset-0 bg-black/60" />
+
+        <Drawer.Content
+          className="fixed bottom-0 left-0 right-0 bg-white rounded-t-xl p-4"
+        >
+          <button
+  className="absolute top-3 right-3 p-1 lg:hidden"
+  onClick={() => setOpen(false)}
+>
+  <X size={18} />
+</button>
+          <div className="mx-auto mb-4 h-1.5 w-10 rounded-full bg-gray-300" />
+
+          <h2 className="text-lg text-center pb- font-semibold">Sections</h2>
+
+        <nav className="flex flex-col gap-0.5 flex-1">
+                  {SECTIONS.map((section) => (
+                    <NavLink
+                      key={section.id}
+                      to={section.path}
+                      end={section.path === '/'}
+                      onClick={() => setOpen(false)}
+                      className={({ isActive }) =>
+                        cn(
+                          'flex items-center gap-2 px-3 py-2 rounded-md text-sm transition-colors duration-150',
+                          isActive
+                            ? 'bg-accent text-foreground font-medium border-l-2 border-primary pl-2.5'
+                            : 'text-muted-foreground hover:text-foreground hover:bg-accent'
+                        )
+                      }
+                    >
+                      {section.label}
+                    </NavLink>
+                  ))}
+                </nav>
+        </Drawer.Content>
+      </Drawer.Portal>
+    </Drawer.Root>
+      
       </div>
 
     </header>
+   
     )
 }
 

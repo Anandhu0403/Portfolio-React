@@ -1,6 +1,3 @@
-// ─────────────────────────────────────────────────────────────────
-//  portfolio.js  –  Edit this file to personalise your portfolio
-// ─────────────────────────────────────────────────────────────────
 
 export const SECTIONS = [
   { id: 'introduction', label: 'Introduction', path: '/' },
@@ -11,6 +8,7 @@ export const SECTIONS = [
   { id: 'education',    label: 'Education',    path: '/education' },
   { id: 'contact',      label: 'Contact',      path: '/contact' },
   { id: 'stats',        label: 'Stats',        path: '/stats' },
+  { id: 'certifications', label: 'Certifications', path: '/certifications' },
 ]
 
 export const PERSONAL = {
@@ -23,10 +21,10 @@ technologies like , React, Tailwind CSS, Node.js, Express, and
 MongoDB, while also applying DevOps practices — continuously aiming to
 deliver high‑quality, user‑centric software.`,
   email:      'anandhu0403@gmail.com',
-  github:     'yourusername',
-  linkedin:   'https://linkedin.com/in/yourprofile',
-  resumeUrl:  '/resume.pdf',
-  location:   'City, Country',
+  github:     'Anandhu0403',
+  linkedin:   'https://www.linkedin.com/in/anandhu-s-a572791bb?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+  resumeUrl:  'Anandhu_S_Resume.pdf',
+  location:   'Kochi, Kerala, India',
 }
 
 export const PROJECTS = [
@@ -36,7 +34,7 @@ export const PROJECTS = [
     description:
       'A sleek and modern redesign of Nike\'s official web experience built with React and Tailwind CSS.',
     tags: ['React', 'Tailwind CSS', 'Vite'],
-    github: 'https://github.com/yourusername/nike-redesign',
+    github: 'https://github.com/Anandhu0403/nike-redesign',
     live:   'https://nike-redesign.vercel.app',
   },
   {
@@ -84,9 +82,6 @@ export const SKILLS = {
   'Backend': [
     'Node.js', 'Express', 'MongoDB', 'PostgreSQL', 'REST APIs', 'GraphQL',
   ],
-  'DevOps & Tools': [
-    'Git', 'Docker', 'GitHub Actions', 'Vercel', 'Linux', 'Nginx',
-  ],
   'Other': [
     'Firebase', 'Supabase', 'Figma', 'Postman', 'VS Code',
   ],
@@ -111,11 +106,38 @@ export const EXPERIENCE = [
 export const EDUCATION = [
   {
     id: 'edu-1',
-    degree: 'B.Tech in Computer Science',
-    institution: 'Your University',
-    period: '2021 – 2025',
-    location: 'City, Country',
-    grade: 'CGPA: 8.5 / 10',
-    description: 'Focused on software engineering, data structures, and web technologies.',
+    degree: 'B.Tech in Computer Science and Engineering',
+    institution: 'Viswajyothi College of Engineering and Technology, Vazhakulam',
+    period: '2020 – 2024',
+    location: 'Vazhakulam, India',
+    grade: '7.22 / 10',
+    description: 'During my time at VJCET, I have built a strong foundation in computer science, focusing on software development, problem-solving, and real world applications. Engaging in hands-on projects has helped me enhance my technical and analytical skills.',
+    Subjects: [
+      'Data Structures and Algorithms',
+      'Object-Oriented Programming',
+      'Database Management Systems',
+      'Operating Systems',
+      'Software Engineering',
+      'Web Development',
+    ],
+    image:'images/viswajyothi.jpg',
+
+    
   },
+  {
+    id: 'edu-2',
+    degree: 'Higher Secondary Education',
+    institution: 'Nirmala Public  School, Muvattupuzha',
+    period: '2018 – 2020',
+    location: 'Muvattupuzha, India',
+    grade: '79.6%',
+    description: 'Completed my Higher Secondary Education with a strong focus on science and mathematics, developing a solid academic foundation for my engineering studies.',
+    Subjects: [
+      'Physics',
+      'Chemistry',
+      'Mathematics',
+      'Biology'
+    ],
+    image:'images/nirmala.jpg',
+  }
 ]

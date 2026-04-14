@@ -8,7 +8,7 @@ function Layout({children}) {
       <Sidebar/>
       <Navbar/>
 
-      <main className="lg:ml-[280px] pt-[57px] min-h-[calc(100vh-57px)]">
+      <main className="lg:ml-[10px] pt-[40px] min-h-[calc(100vh-57px)]">
         {children}
         </main>
     </div>

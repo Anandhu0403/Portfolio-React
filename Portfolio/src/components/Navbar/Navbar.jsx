@@ -10,8 +10,9 @@ function Navbar() {
       fixed top-14 left-0         
       h-[calc(100vh-56px)] w-[240px]
       flex-col
-      border-r border-border
-      bg-background
+      z-40
+      border-r border-border/60
+      bg-background/55 supports-backdrop-filter:bg-background/35 backdrop-blur-xl
     ">
       <div className="flex flex-col h-full px-3 py-6">
 
@@ -32,7 +33,7 @@ function Navbar() {
                 cn(
                   'flex items-center gap-2 px-3 py-2 rounded-md text-sm transition-colors duration-150',
                   isActive
-                    ? 'bg-accent text-foreground font-medium border-l-2 border-primary pl-[10px]'
+                    ? 'bg-accent text-foreground font-medium border-l-2 border-primary pl-2.5'
                     : 'text-muted-foreground hover:text-foreground hover:bg-accent'
                 )
               }
