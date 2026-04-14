@@ -27,50 +27,37 @@ export const PERSONAL = {
 
 export const PROJECTS = [
   {
-    id: 'nike-redesign',
-    title: 'Nike Reimagined | Modern Redesign Concept',
+    id: 'Electro',
+    title: 'Electro | Electronics E commerce Store',
+    image:'projectimage/ElectroHome.jpg',
     description:
-      'A sleek and modern redesign of Nike\'s official web experience built with React and Tailwind CSS.',
-    tags: ['React', 'Tailwind CSS', 'Vite'],
-    github: 'https://github.com/Anandhu0403/nike-redesign',
-    live:   'https://nike-redesign.vercel.app',
+      'Ecommerce website for electronics built with Django, HTML, and Bootstrap CSS, featuring a clean design and responsive layout. Integrated Razorpay API for secure and seamless payment processing, providing users with a smooth shopping experience.',
+    tags: ['Django', 'Bootstrap CSS', 'HTML', 'CSS','Razorpay API'],
+    github: 'https://github.com/Anandhu0403/Electro',
+    live:   'https://anandhu0403.pythonanywhere.com/',
   },
   {
-    id: 'portfolio-site',
-    title: 'Portfolio | Personal Site',
+    id: 'SocialHub',
+    title: 'SocialHub | Instagram Inspired Social Media App',
+    image:'projectimage/Login.png',
     description:
-      'A dynamic portfolio showcasing projects, skills, and contributions using the latest web technologies.',
-    tags: ['React', 'Firebase', 'Tailwind CSS'],
-    github: 'https://github.com/yourusername/portfolio',
-    live:   'https://yourportfolio.dev',
+      'A social media platform inspired by Instagram, built with Django, HTML, and Bootstrap CSS. It allows users to create profiles, share posts, follow others, and engage with content with a responsive interface.',
+    tags: ['Django', 'Bootstrap CSS', 'HTML', 'CSS'],
+    github: 'https://github.com/Anandhu0403/DjangoProjects/tree/master/Instaclone/instaclone',
+    live:   'http://anandhu200204.pythonanywhere.com/',
   },
   {
-    id: 'news-hub',
-    title: 'News Hub | Real‑Time News Platform',
+    id: 'E-Hospitality',
+    title: 'E-Hospitality | Online Doctor Booking Platform',
+    image:'projectimage/HospitalityHome.png',
+
     description:
-      'A real‑time news platform delivering the latest headlines across various categories using the News API.',
-    tags: ['React', 'News API', 'Redux'],
-    github: 'https://github.com/yourusername/news-hub',
-    live:   'https://news-hub.vercel.app',
+      'A web application for booking doctor appointments online, built with Django and Bootstrap CSS.',
+    tags: ['Django', 'Bootstrap CSS', 'HTML', 'CSS'],
+    github: 'https://github.com/Anandhu0403/E_Hospitality',
   },
-  {
-    id: 'freshmart',
-    title: 'Freshmart Store | Modern Grocery Web App',
-    description:
-      'A clean, modern, and responsive grocery store web app built with React, Vite, Redux, and Tailwind CSS.',
-    tags: ['React', 'Redux', 'Vite', 'Tailwind CSS'],
-    github: 'https://github.com/yourusername/freshmart',
-    live:   'https://freshmart.vercel.app',
-  },
-  {
-    id: 'github-viewer',
-    title: 'GitHub Profile Viewer | Instant GitHub Insights',
-    description:
-      'An interactive web app to instantly view GitHub profiles with a clean UI built using HTML, CSS, and JavaScript.',
-    tags: ['HTML', 'CSS', 'JavaScript', 'GitHub API'],
-    github: 'https://github.com/yourusername/github-viewer',
-    live:   'https://github-viewer.vercel.app',
-  },
+ 
+ 
 ]
 
 export const SKILLS = [
