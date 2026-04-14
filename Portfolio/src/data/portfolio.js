@@ -1,4 +1,4 @@
-
+import { SiReact, SiJavascript, SiDocker, SiPython, SiTailwindcss, SiHtml5,SiDjango,SiBootstrap, SiGit, SiGithub, SiPostman, SiCss, SiMysql } from "react-icons/si";
 export const SECTIONS = [
   { id: 'introduction', label: 'Introduction', path: '/' },
   { id: 'about',        label: 'About Me',     path: '/about' },
@@ -73,17 +73,10 @@ export const PROJECTS = [
   },
 ]
 
-export const SKILLS = {
-  'Frontend': [
-    'React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Redux', 'Vite',
-  ],
-  'Backend': [
-    'Node.js', 'Express', 'MongoDB', 'PostgreSQL', 'REST APIs', 'GraphQL',
-  ],
-  'Other': [
-    'Firebase', 'Supabase', 'Figma', 'Postman', 'VS Code',
-  ],
-}
+export const SKILLS = [
+    {name:"Python" , icon:SiPython},{name:"React" , icon:SiReact},{name:"JavaScript" , icon:SiJavascript},{name:"Tailwind CSS" , icon:SiTailwindcss},
+    {name:"HTML", icon:SiHtml5},{name:"CSS", icon:SiCss},{name:"Bootstrap CSS", icon:SiBootstrap},{name:"Django", icon:SiDjango},{name:"Git",icon:SiGit},{name:"Github",icon:SiGithub},{name:"PostMan",icon:SiPostman},{name:"MySQL",icon:SiMysql},{name:"VS Code"}
+]
 
 export const EXPERIENCE = [
   {
