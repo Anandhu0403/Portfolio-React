@@ -8,6 +8,7 @@ import Contact from "./pages/Contact"
 import Education from "./pages/Education"
 import Experience from "./pages/Experience"
 import Certifications from "./pages/Certifications"
+import PageNotFound from "./pages/PageNotFound"
 function App() {
   return (
     <>
@@ -22,6 +23,7 @@ function App() {
         <Route path="/education" element={<Education />} />
         <Route path="/experience" element={<Experience />} />
         <Route path="/certifications" element={<Certifications />} />
+         <Route path="*" element={<PageNotFound />} /> 
       
     </Routes>
     </Layout>

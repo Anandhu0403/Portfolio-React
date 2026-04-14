@@ -8,6 +8,7 @@ import { cn } from '@/lib/utils'
 import { SECTIONS, PERSONAL } from '@/data/portfolio'
 import { Drawer } from 'vaul'
 import { DrawerContent, DrawerTrigger } from '../ui/drawer'
+import { FaGithub } from "react-icons/fa";
 function Sidebar() {
   const [open, setOpen] = useState(false)
 
@@ -53,22 +54,22 @@ function Sidebar() {
         <Button variant="ghost" size="icon" asChild>
           <a href={`https://github.com/${PERSONAL.github}`}
             target="_blank" rel="noopener noreferrer">
-            {/* <Github size={16} /> */}
+            <FaGithub size={16} />
           </a>
-        </Button>
+        </Button> 
 
         {/* ── Mobile menu (Sheet) ── */}
 
-          <Drawer.Root open={open} onOpenChange={setOpen}  modal={false}>
+          <Drawer.Root open={open} onOpenChange={setOpen}>
       <Drawer.Trigger asChild>
         <button className="p-2 border lg:hidden"><Menu size={16} /></button>
       </Drawer.Trigger>
 
       <Drawer.Portal>
-        <Drawer.Overlay className="fixed inset-0 bg-black/60" />
+        <Drawer.Overlay className=" fixed inset-0 bg-black/60" />
 
         <Drawer.Content
-          className="fixed bottom-0 left-0 right-0 bg-white rounded-t-xl p-4"
+          className="fixed bottom-0 left-0 right-0 rounded-t-xl border border-border bg-card p-4 text-card-foreground dark:bg-black"
         >
           <button
   className="absolute top-3 right-3 p-1 lg:hidden"
@@ -76,7 +77,7 @@ function Sidebar() {
 >
   <X size={18} />
 </button>
-          <div className="mx-auto mb-4 h-1.5 w-10 rounded-full bg-gray-300" />
+          <div className="mx-auto mb-4 h-1.5 w-10 rounded-full bg-muted-foreground/30" />
 
           <h2 className="text-lg text-center pb- font-semibold">Sections</h2>
 

@@ -1,7 +1,8 @@
 import { MapPin, Calendar, GraduationCap } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import { CircleSmall, BriefcaseBusiness } from 'lucide-react'
 import { Badge } from "@/components/ui/badge"
-export default function EducationCard({ edu }) {
+export default function ExperienceCard({ exp }) {
   return (
     <div className={cn(
       'group rounded-xl border border-border bg-card overflow-hidden',
@@ -13,26 +14,18 @@ export default function EducationCard({ edu }) {
       <div className="relative md:w-60 md:shrink-0 h-45 md:h-auto bg-muted">
 
         {/* Your actual image — swap src */}
-        {edu.image ? (
-          <img
-            src={edu.image}
-            alt={edu.institution}
-            className="w-full h-full object-cover"
-          />
-        ) : (
-          // Placeholder when no image — shows institution initials
+         
           <div className="w-full h-full flex items-center justify-center">
-            <GraduationCap size={48} className="text-muted-foreground/20" />
+            <BriefcaseBusiness size={48} className="text-muted-foreground/20" />
           </div>
-        )}
 
         {/* Gradient overlay with title on top of image */}
         <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 p-4">
           <h3 className="text-white font-bold text-base leading-tight">
-            {edu.degree}
+            {exp.role}
           </h3>
-          <p className="text-white/70 text-xs mt-1">{edu.period}</p>
+          <p className="text-white/70 text-xs mt-1">{exp.period}</p>
         </div>
       </div>
 
@@ -43,18 +36,23 @@ export default function EducationCard({ edu }) {
         <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full
           border border-border text-muted-foreground text-xs w-fit mb-3">
           <MapPin size={11} />
-          {edu.location}
+          {exp.location}
         </div>
 
         {/* Institution name */}
         <h4 className="text-foreground font-bold text-sm mb-1">
-          {edu.institution}
+          {exp.company}
         </h4>
 
         {/* Description */}
-        {edu.description && (
+        {exp.description && (
           <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-            {edu.description}
+            {exp.description.map((line, index) => (
+              <span key={index} className="block">
+                <CircleSmall size={12} className="inline-block mr-2" />
+                {line}
+              </span>
+            ))}
           </p>
         )}
 
@@ -62,37 +60,25 @@ export default function EducationCard({ edu }) {
         <div className="flex flex-wrap gap-3 mb-4">
           <span className="flex items-center gap-1.5 text-xs text-muted-foreground">
             <Calendar size={12} />
-            {edu.period}
+            {exp.period}
           </span>
           <span className="flex items-center gap-1.5 text-xs text-muted-foreground">
-            <GraduationCap size={12} />
-            {edu.degree}
+            <BriefcaseBusiness size={12} />
+            {exp.type}
           </span>
         </div>
         {/* Subjects/skills tags */}
-        {edu.Subjects && (
+        {exp.tags && (
           <div className="flex flex-wrap gap-2 mb-4">
-            {edu.Subjects.map((subject, index) => (
+            {exp.tags.map((tag, index) => (
               <Badge key={index} variant="outline" className="text-xs">
-                {subject}
+                {tag}
               </Badge>
             ))}
           </div>
         )}
 
 
-        {/* CGPA */}
-        <div className="flex items-center justify-between pt-3 border-t border-border">
-          <span className="text-[11px] font-mono uppercase tracking-widest text-muted-foreground">
-            Grade
-          </span>
-          <div className="flex items-baseline gap-1">
-            <span className="text-xl font-semibold font-mono text-foreground">
-              {edu.grade}
-            </span>
-            <span className="text-xs text-muted-foreground"></span>
-          </div>
-        </div>
       </div>
     </div>
   )
