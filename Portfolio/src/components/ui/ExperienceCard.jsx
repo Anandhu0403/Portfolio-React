@@ -7,7 +7,7 @@ export default function ExperienceCard({ exp }) {
     <div className={cn(
       'group rounded-xl border border-border bg-card overflow-hidden',
       'flex flex-col md:flex-row',          // column on mobile, row on desktop
-      'hover:border-border/80 transition-colors duration-200'
+      'hover:border-border/80 transition-colors duration-200 transition-transform duration-300 ease-out hover:scale-105'
     )}>
 
       {/* ── Image block with overlapping title ── */}

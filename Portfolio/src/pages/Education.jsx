@@ -20,10 +20,11 @@ import {
 import { Badge } from "@/components/ui/badge"
 import { EDUCATION } from '../data/portfolio'
 import EducationCard from '../components/ui/EducationCard'
+import { FaUserGraduate } from 'react-icons/fa'
 function Education() {
   return (
      <div className="max-w-3xl mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold mb-4">Education</h1>
+      <h1 className="text-4xl font-bold mb-4 flex gap-1.5"><FaUserGraduate />Education</h1>
        <div className="flex flex-col gap-4">
         {EDUCATION.map((edu) => (
           <EducationCard key={edu.id} edu={edu} />

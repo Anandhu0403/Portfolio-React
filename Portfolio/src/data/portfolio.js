@@ -20,7 +20,7 @@ export const PERSONAL = {
   bio:        `I enjoy coding and building software that solves real problems. I have experience working with Python, Django, PHP, React, and .NET Web API, and I’m genuinely interested in creating applications that are practical, scalable, and useful. I’m always looking to improve my skills and learn better ways to build software.`,
   email:      'anandhu0403@gmail.com',
   github:     'Anandhu0403',
-  whatsapp:   'https://wa.me/8590071731',
+  whatsapp:   'https://wa.me/+918590071731',
   instagram:  'https://www.instagram.com/anandhu0403/',
   linkedin:   'https://www.linkedin.com/in/anandhu-s-a572791bb?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
   resumeUrl:  'resume/Anandhu_S_Resume.pdf',
