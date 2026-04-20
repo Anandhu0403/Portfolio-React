@@ -24,7 +24,14 @@ import { FaUserGraduate } from 'react-icons/fa'
 function Education() {
   return (
      <div className="max-w-3xl mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold mb-4 flex gap-1.5"><FaUserGraduate />Education</h1>
+      <h1 className=" mb-4 flex gap-1.5 font-poppins text-5xl font-bold
+        dark:bg-gradient-to-r
+    dark:from-slate-300
+    dark:to-slate-500
+    dark:bg-clip-text
+    dark:text-transparent
+            bg-clip-text 
+             p-5"><FaUserGraduate className='dark:text-gray-300'/>Education</h1>
        <div className="flex flex-col gap-4">
         {EDUCATION.map((edu) => (
           <EducationCard key={edu.id} edu={edu} />

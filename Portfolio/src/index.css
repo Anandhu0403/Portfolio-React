@@ -1,9 +1,14 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 @import "tw-animate-css";
+@import "tailwindcss";
+
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/geist";
 
 @custom-variant dark (&:is(.dark *));
+@theme {
+  --font-poppins: "Poppins", sans-serif;
+}
 @theme {
   --color-bg: #0a0a0a;
   --color-surface: #111111;

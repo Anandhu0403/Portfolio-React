@@ -59,7 +59,12 @@ function Introduction() {
   return (
     <div>
       <div className="max-w-3xl mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-4">Hi, I'm Anandhu</h1>
+        <h1 className="font-poppins text-5xl font-bold 
+        dark:bg-gradient-to-r
+    dark:from-slate-300
+    dark:to-slate-500
+    dark:bg-clip-text
+    dark:text-transparent ">Hi, I'm Anandhu</h1>
         <p className="text-lg text-muted-foreground mb-6">
           {PERSONAL.bio}
         </p>

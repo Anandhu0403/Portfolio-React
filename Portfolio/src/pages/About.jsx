@@ -9,7 +9,11 @@ function About() {
   return (
     <div>
        <div className="max-w-3xl mx-auto px-4 py-16">
-            <h1 className="text-4xl font-bold mb-4">About Me</h1>
+            <h1 className="font-poppins text-5xl font-bold  dark:bg-gradient-to-r
+    dark:from-slate-300
+    dark:to-slate-500
+    dark:bg-clip-text
+    dark:text-transparent p-5">About Me</h1>
             <div className="mb-6">
               <img
                 src="images/Profile.jpg"

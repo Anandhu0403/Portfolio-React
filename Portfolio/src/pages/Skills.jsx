@@ -6,7 +6,13 @@ function Skills() {
   return (
     <div>
         <div className="max-w-3xl mx-auto px-4 py-16">
-            <h1 className="text-4xl font-bold mb-4 flex gap-1.5"><FaTools />Skills</h1>
+            <h1 className=" mb-4 flex gap-1.5 font-poppins text-5xl font-bold 
+            dark:bg-gradient-to-r
+    dark:from-slate-300
+    dark:to-slate-500
+    dark:bg-clip-text
+    dark:text-transparent
+             p-5   "><FaTools className='dark:text-gray-300'/>Skills</h1>
             <p className="text-lg text-muted-foreground mb-6">
               As a full-stack Software Engineer, I specialize in building scalable web applications using modern technologies such as Django React.js, and Tailwind CSS. I'm also expanding my expertise into Ai  to create efficient, maintainable, robust web solutions.
             </p>
