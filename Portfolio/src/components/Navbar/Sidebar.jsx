@@ -1,16 +1,23 @@
 import React from 'react'
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import { Menu, ExternalLink, ArrowUpRight, X } from 'lucide-react'
+import { Menu, ExternalLink, ArrowUpRight, X, Sun, Moon } from 'lucide-react'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { SECTIONS, PERSONAL } from '@/data/portfolio'
 import { Drawer } from 'vaul'
 import { DrawerContent, DrawerTrigger } from '../ui/drawer'
-import { FaGithub } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa"
+import { useTheme } from '@/components/theme-provider'
+
 function Sidebar() {
   const [open, setOpen] = useState(false)
+  const { theme, setTheme } = useTheme()
+
+  const toggleTheme = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark')
+  }
 
   return (
    
@@ -51,6 +58,9 @@ function Sidebar() {
 
       {/* ── Right side icons ── */}
       <div className="ml-auto flex items-center gap-1">
+        <Button variant="ghost" size="icon" onClick={toggleTheme}>
+          {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
+        </Button>
         <Button variant="ghost" size="icon" asChild>
           <a href={`https://github.com/${PERSONAL.github}`}
             target="_blank" rel="noopener noreferrer">

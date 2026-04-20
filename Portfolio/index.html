@@ -6,6 +6,21 @@
     <link rel="icon" type="image/svg+xml" href="/square-arrow-up-right.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anandhu.dev</title>
+    <script>
+      (function() {
+        const storageKey = 'vite-ui-theme'
+        const root = document.documentElement
+        const theme = localStorage.getItem(storageKey) || 'system'
+        
+        let resolvedTheme = theme
+        if (theme === 'system') {
+          resolvedTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+        }
+        
+        root.classList.remove('light', 'dark')
+        root.classList.add(resolvedTheme)
+      })()
+    </script>
   </head>
   <body>
     <div id="root"></div>

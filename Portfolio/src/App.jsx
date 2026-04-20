@@ -9,9 +9,11 @@ import Education from "./pages/Education"
 import Experience from "./pages/Experience"
 import Certifications from "./pages/Certifications"
 import PageNotFound from "./pages/PageNotFound"
+import { ThemeProvider } from "@/components/theme-provider"
 function App() {
   return (
     <>
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
     <Layout>
     <Routes>
     
@@ -27,6 +29,7 @@ function App() {
       
     </Routes>
     </Layout>
+    </ThemeProvider>
     </>
   )
 }

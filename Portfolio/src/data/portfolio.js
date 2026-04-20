@@ -8,7 +8,7 @@ export const SECTIONS = [
   { id: 'experience',   label: 'Experience',   path: '/experience' },
   { id: 'education',    label: 'Education',    path: '/education' },
   { id: 'certifications', label: 'Certifications', path: '/certifications' },
-  { id: 'contact',      label: 'Contact',      path: '/contact' },
+  // { id: 'contact',      label: 'Contact',      path: '/contact' },
   // { id: 'stats',        label: 'Stats',        path: '/stats' },
   
 ]

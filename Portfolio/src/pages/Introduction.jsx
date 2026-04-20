@@ -89,7 +89,7 @@ function Introduction() {
                     className="inline-flex items-center gap-1 rounded border border-background/30 px-2 py-1 text-[11px] font-medium text-background transition-colors hover:bg-background/10"
                   >
                     <Copy size={12} />
-                    Copy
+                    
                   </button>
                 </div>
               </TooltipContent>
