@@ -1,3 +1,4 @@
+
 import { SiReact, SiJavascript, SiDocker, SiPython, SiTailwindcss, SiHtml5,SiDjango,SiBootstrap, SiGit, SiGithub, SiPostman, SiCss, SiMysql } from "react-icons/si";
 export const SECTIONS = [
   { id: 'introduction', label: 'Introduction', path: '/' },
@@ -20,9 +21,26 @@ export const PERSONAL = {
   email:      'anandhu0403@gmail.com',
   github:     'Anandhu0403',
   whatsapp:   'https://wa.me/8590071731',
+  instagram:  'https://www.instagram.com/anandhu0403/',
   linkedin:   'https://www.linkedin.com/in/anandhu-s-a572791bb?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
   resumeUrl:  'resume/Anandhu_S_Resume.pdf',
   location:   'Kochi, Kerala, India',
+  image:      'images/Profile.jpg',
+  about: `My journey with computer science started long before college. Ever since I was young, I was fascinated by how technology works, and how simple lines of code could turn ideas into real, working solutions. That curiosity slowly grew into a genuine passion for building software and solving problems through programming.
+
+During my B.Tech in Computer Science Engineering, I had the opportunity to deepen that passion and strengthen my technical foundation. Through academic projects, hands-on development, and continuous learning, I explored different areas of software development and gained practical experience in building real applications.
+
+As I progressed, I focused on full stack development, working with technologies like Django, React, SQL, and modern web development practices. I learned how to create responsive frontend interfaces, scalable backends, and connect everything into complete, functional applications.
+
+My professional journey began as a Software Trainer, where I guided students in programming concepts and development practices. Teaching helped me sharpen both my technical understanding and communication skills, while also giving me the satisfaction of helping others grow in their careers.
+
+Today, I work as a Software Developer, building and maintaining .NET applications and contributing to real business solutions through software. This role has expanded my experience in enterprise application development, API integration, database management, and production-level problem solving.
+
+My core specialization includes Django, .NET, PHP, SQL, and React, with a strong focus on developing efficient, scalable, and user-focused applications. I enjoy turning complex requirements into practical solutions and continuously improving my skills as technology evolves.`
+// hobbies: [
+//     'Web Development and Programming',
+//     'Reading Tech Blogs and Documentation',
+//     '',
 }
 
 export const PROJECTS = [
@@ -77,6 +95,7 @@ export const EXPERIENCE = [
       'Currently working as a Junior Developer contributing to the development of a custom ERP system built with .NET WinForms and SQL Server. ',
       'Collaborating with cross-functional teams to design and implement new features, optimize performance, and ensure the delivery of high-quality software solutions.',
     ],
+    tags: ['.NET WinForms','.NET Web API', 'SQL Server', 'Software Development', 'Team Collaboration'],
   },
   {
     id: 'exp-2',
@@ -192,6 +211,15 @@ export const CERTIFICATIONS = [
     description:'An introduction to the principles and practices of software engineering.',
     tags: ['Software Engineering', 'Coursera','SDLC'],
     link:'certifications/Coursera-GKTVJZDQ5J51.pdf',
+  },
+  {
+    id: 'cert-6',
+    title:'Introduction to Generative AI',
+    issuer:'Coursera',
+    date:'Issued April 2026',
+    description:'An introduction to generative AI concepts and applications.',
+    tags: ['Generative AI', 'Coursera'],
+    link:'certifications/GenerativeAI.pdf',
   }
 
 ]
