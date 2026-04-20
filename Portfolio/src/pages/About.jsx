@@ -9,7 +9,7 @@ function About() {
   return (
     <div>
        <div className="max-w-3xl mx-auto px-4 py-16">
-            <h1 className="font-poppins text-5xl font-bold  dark:bg-gradient-to-r
+            <h1 className="font-poppins text-4xl md:text-5xl font-bold  dark:bg-gradient-to-r
     dark:from-slate-300
     dark:to-slate-500
     dark:bg-clip-text
