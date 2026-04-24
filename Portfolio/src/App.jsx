@@ -10,6 +10,7 @@ import Experience from "./pages/Experience"
 import Certifications from "./pages/Certifications"
 import PageNotFound from "./pages/PageNotFound"
 import { ThemeProvider } from "@/components/theme-provider"
+import { Analytics } from '@vercel/analytics/react'
 function App() {
   return (
     <>
@@ -30,6 +31,7 @@ function App() {
     </Routes>
     </Layout>
     </ThemeProvider>
+    <Analytics />
     </>
   )
 }
