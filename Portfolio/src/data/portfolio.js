@@ -220,6 +220,23 @@ export const CERTIFICATIONS = [
     description:'An introduction to generative AI concepts and applications.',
     tags: ['Generative AI', 'Coursera'],
     link:'certifications/GenerativeAI.pdf',
+  },
+  {
+    id: 'cert-7',
+    title:'Introduction to Claude',
+    issuer:'Anthropic',
+    date:'Issued April 2026',
+    description:'An introduction to Claude, an AI assistant developed by Anthropic, covering its features, capabilities, and applications.',
+    tags: ['Claude', 'Anthropic'],
+    link:'certifications/claude101.pdf', 
+  },
+  {
+    id: 'cert-8',
+    title:'Introduction to Claude Code', 
+    issuer:'Anthropic',
+    date:'Issued April 2026',
+    description:'An introduction to Claude Code, a Ai Assistant in terminal designed for AI development by Anthropic, covering its features and applications.',
+    tags: ['Claude Code', 'Anthropic'],
+    link:'certifications/claudecode.pdf',
   }
-
 ]
