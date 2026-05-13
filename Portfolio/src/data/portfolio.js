@@ -238,5 +238,14 @@ export const CERTIFICATIONS = [
     description:'An introduction to Claude Code, a Ai Assistant in terminal designed for AI development by Anthropic, covering its features and applications.',
     tags: ['Claude Code', 'Anthropic'],
     link:'certifications/claudecode.pdf',
+  },
+  {
+    id: 'cert-9',
+    title:'IBM AI Developer', 
+    issuer:'IBM',
+    date:'Issued May 2026',
+    description:'Professional Certificate - 10 course series',
+    tags: ['Prompting', 'LLM','SDLC',''],
+    link:'certifications/IBM AI Developer.pdf',
   }
 ]
